@@ -1,4 +1,4 @@
-package org.examle.libtest;
+package org.examle.libtest.service;
 
 import org.examle.libtest.entity.User;
 import org.examle.libtest.entity.UserRepository;
@@ -18,7 +18,7 @@ public class UserService {
 
     // Reading Users
     public List<User> getAllUsers() {return userRepository.findAll();}
-    public User getUserById(Long id) {return userRepository.findById(id).orElse(null);}
+    public User getUserById(int id) {return userRepository.findById((long) id).orElse(null);}
 
     // Updating a User
     public User updateUser(User updateUser) {return userRepository.save(updateUser);}
